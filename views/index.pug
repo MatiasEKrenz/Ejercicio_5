@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+  body
+    h2 Tendencias en MeLi
+    form(action='http://localhost:3000/trends', method='post')
+      |   País:
+      br
+      select(name='pais', required='')
+        option(disabled='', selected='', value='') Seleccione un sitio
+        each variable in sites
+          option(value=variable.id) #{variable.name}
+      br
+      |   Categoría:
+      br
+      input(type='text', name='categoria')
+      br
+      |   Columnas:
+      br
+      select(name='columnas')
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5
+      br
+      |   Filas:
+      br
+      select(name='filas')
+        option(value='3') 3
+        option(value='4') 4
+        option(value='5') 5
+      br
+      |   Opción:
+      br
+      input(type='text', name='opcion')
+      br
+      br
+      input(type='submit', value='Consultar')
