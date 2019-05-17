@@ -61,7 +61,7 @@ router.post('/trends', function(req, res, next) {
             for(var i = 0; i < trendsArray.length; i++) {
                 trendsArray[i] = trendsData.slice(i*rows, i*rows+columns);
             }
-            res.render('trendsss', { trends: trendsArray });
+            res.render('trendsss', { trendss: trendsArray });
         });
 
 
@@ -76,9 +76,3 @@ router.post('/trends', function(req, res, next) {
 });
 
 module.exports = router;
-
-
-/*
-        //for cla in trendss
-            //p #{cla.keyword}
- */
